@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1994,6 +1994,18 @@
 			"value" : "glfw_DIR-NOTFOUND"
 		},
 		{
+			"name" : "glm_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/johnp/Documents/GitHub/Thighs/build/dependencies/glm"
+		},
+		{
 			"name" : "glm_DIR",
 			"properties" : 
 			[
@@ -2008,6 +2020,30 @@
 			],
 			"type" : "PATH",
 			"value" : "glm_DIR-NOTFOUND"
+		},
+		{
+			"name" : "glm_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "glm_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/johnp/Documents/GitHub/Thighs/dependencies/glm"
 		}
 	],
 	"kind" : "cache",

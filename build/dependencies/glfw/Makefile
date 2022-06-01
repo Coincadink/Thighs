@@ -161,20 +161,6 @@ depend:
 	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-dependencies/glfw/CMakeFiles/uninstall.dir/rule:
-	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glfw/CMakeFiles/uninstall.dir/rule
-.PHONY : dependencies/glfw/CMakeFiles/uninstall.dir/rule
-
-# Convenience name for target.
-uninstall: dependencies/glfw/CMakeFiles/uninstall.dir/rule
-.PHONY : uninstall
-
-# fast build rule for target.
-uninstall/fast:
-	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(MAKE) $(MAKESILENT) -f dependencies/glfw/CMakeFiles/uninstall.dir/build.make dependencies/glfw/CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -187,7 +173,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... uninstall"
 .PHONY : help
 
 

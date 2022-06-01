@@ -64,15 +64,18 @@ CMAKE_BINARY_DIR = /C/Users/johnp/Documents/GitHub/Thighs/build
 
 # The main recursive "all" target.
 all: CMakeFiles/thighs.dir/all
+all: dependencies/glm/all
 all: dependencies/glfw/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: dependencies/glm/preinstall
 preinstall: dependencies/glfw/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/thighs.dir/clean
+clean: dependencies/glm/clean
 clean: dependencies/glfw/clean
 .PHONY : clean
 
@@ -88,7 +91,6 @@ dependencies/glfw/preinstall: dependencies/glfw/src/preinstall
 .PHONY : dependencies/glfw/preinstall
 
 # Recursive "clean" directory target.
-dependencies/glfw/clean: dependencies/glfw/CMakeFiles/uninstall.dir/clean
 dependencies/glfw/clean: dependencies/glfw/src/clean
 .PHONY : dependencies/glfw/clean
 
@@ -107,6 +109,37 @@ dependencies/glfw/src/preinstall:
 dependencies/glfw/src/clean: dependencies/glfw/src/CMakeFiles/glfw.dir/clean
 dependencies/glfw/src/clean: dependencies/glfw/src/CMakeFiles/update_mappings.dir/clean
 .PHONY : dependencies/glfw/src/clean
+
+#=============================================================================
+# Directory level rules for directory dependencies/glm
+
+# Recursive "all" directory target.
+dependencies/glm/all: dependencies/glm/glm/all
+.PHONY : dependencies/glm/all
+
+# Recursive "preinstall" directory target.
+dependencies/glm/preinstall: dependencies/glm/glm/preinstall
+.PHONY : dependencies/glm/preinstall
+
+# Recursive "clean" directory target.
+dependencies/glm/clean: dependencies/glm/CMakeFiles/uninstall.dir/clean
+dependencies/glm/clean: dependencies/glm/glm/clean
+.PHONY : dependencies/glm/clean
+
+#=============================================================================
+# Directory level rules for directory dependencies/glm/glm
+
+# Recursive "all" directory target.
+dependencies/glm/glm/all:
+.PHONY : dependencies/glm/glm/all
+
+# Recursive "preinstall" directory target.
+dependencies/glm/glm/preinstall:
+.PHONY : dependencies/glm/glm/preinstall
+
+# Recursive "clean" directory target.
+dependencies/glm/glm/clean:
+.PHONY : dependencies/glm/glm/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/thighs.dir
@@ -135,30 +168,30 @@ CMakeFiles/thighs.dir/clean:
 .PHONY : CMakeFiles/thighs.dir/clean
 
 #=============================================================================
-# Target rules for target dependencies/glfw/CMakeFiles/uninstall.dir
+# Target rules for target dependencies/glm/CMakeFiles/uninstall.dir
 
 # All Build rule for target.
-dependencies/glfw/CMakeFiles/uninstall.dir/all:
-	$(MAKE) $(MAKESILENT) -f dependencies/glfw/CMakeFiles/uninstall.dir/build.make dependencies/glfw/CMakeFiles/uninstall.dir/depend
-	$(MAKE) $(MAKESILENT) -f dependencies/glfw/CMakeFiles/uninstall.dir/build.make dependencies/glfw/CMakeFiles/uninstall.dir/build
+dependencies/glm/CMakeFiles/uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f dependencies/glm/CMakeFiles/uninstall.dir/build.make dependencies/glm/CMakeFiles/uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f dependencies/glm/CMakeFiles/uninstall.dir/build.make dependencies/glm/CMakeFiles/uninstall.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/C/Users/johnp/Documents/GitHub/Thighs/build/CMakeFiles --progress-num= "Built target uninstall"
-.PHONY : dependencies/glfw/CMakeFiles/uninstall.dir/all
+.PHONY : dependencies/glm/CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
-dependencies/glfw/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+dependencies/glm/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /C/Users/johnp/Documents/GitHub/Thighs/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glfw/CMakeFiles/uninstall.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glm/CMakeFiles/uninstall.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /C/Users/johnp/Documents/GitHub/Thighs/build/CMakeFiles 0
-.PHONY : dependencies/glfw/CMakeFiles/uninstall.dir/rule
+.PHONY : dependencies/glm/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
-uninstall: dependencies/glfw/CMakeFiles/uninstall.dir/rule
+uninstall: dependencies/glm/CMakeFiles/uninstall.dir/rule
 .PHONY : uninstall
 
 # clean rule for target.
-dependencies/glfw/CMakeFiles/uninstall.dir/clean:
-	$(MAKE) $(MAKESILENT) -f dependencies/glfw/CMakeFiles/uninstall.dir/build.make dependencies/glfw/CMakeFiles/uninstall.dir/clean
-.PHONY : dependencies/glfw/CMakeFiles/uninstall.dir/clean
+dependencies/glm/CMakeFiles/uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f dependencies/glm/CMakeFiles/uninstall.dir/build.make dependencies/glm/CMakeFiles/uninstall.dir/clean
+.PHONY : dependencies/glm/CMakeFiles/uninstall.dir/clean
 
 #=============================================================================
 # Target rules for target dependencies/glfw/src/CMakeFiles/glfw.dir

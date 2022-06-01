@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 16,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 17,
+				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -55,17 +55,16 @@
 			[
 				{
 					"backtrace" : 2,
+					"path" : "C:/Users/johnp/Documents/GitHub/Thighs/dependencies/glm"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "C:/Users/johnp/Documents/GitHub/Thighs/dependencies/glfw/include"
 				},
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "C:/VulkanSDK/1.3.211.0/Include"
-				},
-				{
-					"backtrace" : 2,
-					"isSystem" : true,
-					"path" : "C:/Libraries/glm"
 				}
 			],
 			"language" : "CXX",

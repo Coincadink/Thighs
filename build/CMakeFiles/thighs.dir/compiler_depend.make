@@ -211,7 +211,7 @@ CMakeFiles/thighs.dir/src/Vulkan_interface.cpp.obj: ../src/Vulkan_interface.cpp 
   C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_handles.hpp \
   C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_structs.hpp \
   C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_funcs.hpp \
-  ../dependencies/glfw3/include/GLFW/glfw3.h \
+  ../dependencies/glfw/include/GLFW/glfw3.h \
   C:/msys64/mingw64/include/GL/gl.h
 
 CMakeFiles/thighs.dir/src/main.cpp.obj: ../src/main.cpp \
@@ -662,6 +662,8 @@ C:/msys64/mingw64/include/c++/11.3.0/cerrno:
 
 C:/msys64/mingw64/include/c++/11.3.0/bits/basic_string.tcc:
 
+../dependencies/glfw/include/GLFW/glfw3.h:
+
 C:/msys64/mingw64/include/wctype.h:
 
 C:/msys64/mingw64/include/c++/11.3.0/bits/locale_classes.tcc:
@@ -783,8 +785,6 @@ C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_handles.hpp:
 C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_structs.hpp:
 
 C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_funcs.hpp:
-
-../dependencies/glfw3/include/GLFW/glfw3.h:
 
 ../src/main.cpp:
 

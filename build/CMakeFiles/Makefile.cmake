@@ -7,8 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "MSYS Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "C:/Libraries/glm/cmake/glm/glmConfig-version.cmake"
-  "C:/Libraries/glm/cmake/glm/glmConfig.cmake"
   "C:/Program Files/CMake/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "C:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCInformation.cmake"
   "C:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCXXInformation.cmake"
@@ -48,11 +46,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.23.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.23.1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.23.1/CMakeSystem.cmake"
-  "../dependencies/glfw/CMake/cmake_uninstall.cmake.in"
   "../dependencies/glfw/CMake/glfw3.pc.in"
   "../dependencies/glfw/CMake/glfw3Config.cmake.in"
   "../dependencies/glfw/CMakeLists.txt"
   "../dependencies/glfw/src/CMakeLists.txt"
+  "../dependencies/glm/CMakeLists.txt"
+  "../dependencies/glm/cmake/cmake_uninstall.cmake.in"
+  "../dependencies/glm/glm/CMakeLists.txt"
   "../shaders/comp.spv"
   )
 
@@ -66,9 +66,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "shaders/comp.spv"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "dependencies/glm/cmake_uninstall.cmake"
+  "dependencies/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "dependencies/glm/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   "dependencies/glfw/src/glfw3Config.cmake"
   "dependencies/glfw/src/glfw3ConfigVersion.cmake"
-  "dependencies/glfw/cmake_uninstall.cmake"
   "dependencies/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
   "dependencies/glfw/src/glfw3.pc"
   "dependencies/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -77,7 +79,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/thighs.dir/DependInfo.cmake"
-  "dependencies/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
+  "dependencies/glm/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "dependencies/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "dependencies/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
   )

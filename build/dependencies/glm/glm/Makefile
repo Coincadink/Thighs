@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/Users/johnp/Documents/GitHub/Thighs/build/CMakeFiles /C/Users/johnp/Documents/GitHub/Thighs/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(CMAKE_COMMAND) -E cmake_progress_start /C/Users/johnp/Documents/GitHub/Thighs/build/CMakeFiles /C/Users/johnp/Documents/GitHub/Thighs/build/dependencies/glm/glm//CMakeFiles/progress.marks
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glm/glm/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /C/Users/johnp/Documents/GitHub/Thighs/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glm/glm/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,118 +148,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glm/glm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/glm/glm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named thighs
-
-# Build rule for target.
-thighs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thighs
-.PHONY : thighs
-
-# fast build rule for target.
-thighs/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/build
-.PHONY : thighs/fast
-
-#=============================================================================
-# Target rules for targets named uninstall
-
-# Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
-
-# fast build rule for target.
-uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f dependencies/glm/CMakeFiles/uninstall.dir/build.make dependencies/glm/CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
-
-#=============================================================================
-# Target rules for targets named glfw
-
-# Build rule for target.
-glfw: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
-.PHONY : glfw
-
-# fast build rule for target.
-glfw/fast:
-	$(MAKE) $(MAKESILENT) -f dependencies/glfw/src/CMakeFiles/glfw.dir/build.make dependencies/glfw/src/CMakeFiles/glfw.dir/build
-.PHONY : glfw/fast
-
-#=============================================================================
-# Target rules for targets named update_mappings
-
-# Build rule for target.
-update_mappings: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
-.PHONY : update_mappings
-
-# fast build rule for target.
-update_mappings/fast:
-	$(MAKE) $(MAKESILENT) -f dependencies/glfw/src/CMakeFiles/update_mappings.dir/build.make dependencies/glfw/src/CMakeFiles/update_mappings.dir/build
-.PHONY : update_mappings/fast
-
-src/Vulkan_interface.obj: src/Vulkan_interface.cpp.obj
-.PHONY : src/Vulkan_interface.obj
-
-# target to build an object file
-src/Vulkan_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/src/Vulkan_interface.cpp.obj
-.PHONY : src/Vulkan_interface.cpp.obj
-
-src/Vulkan_interface.i: src/Vulkan_interface.cpp.i
-.PHONY : src/Vulkan_interface.i
-
-# target to preprocess a source file
-src/Vulkan_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/src/Vulkan_interface.cpp.i
-.PHONY : src/Vulkan_interface.cpp.i
-
-src/Vulkan_interface.s: src/Vulkan_interface.cpp.s
-.PHONY : src/Vulkan_interface.s
-
-# target to generate assembly for a file
-src/Vulkan_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/src/Vulkan_interface.cpp.s
-.PHONY : src/Vulkan_interface.cpp.s
-
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
-
-# target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/thighs.dir/build.make CMakeFiles/thighs.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -273,16 +173,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... uninstall"
-	@echo "... update_mappings"
-	@echo "... glfw"
-	@echo "... thighs"
-	@echo "... src/Vulkan_interface.obj"
-	@echo "... src/Vulkan_interface.i"
-	@echo "... src/Vulkan_interface.s"
-	@echo "... src/main.obj"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 
@@ -294,6 +184,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /C/Users/johnp/Documents/GitHub/Thighs/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

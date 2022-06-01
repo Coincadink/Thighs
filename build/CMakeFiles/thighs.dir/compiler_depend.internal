@@ -212,7 +212,7 @@ CMakeFiles/thighs.dir/src/Vulkan_interface.cpp.obj
  C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_handles.hpp
  C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_structs.hpp
  C:/VulkanSDK/1.3.211.0/Include/vulkan/vulkan_funcs.hpp
- C:/Users/johnp/Documents/GitHub/Thighs/dependencies/glfw3/include/GLFW/glfw3.h
+ C:/Users/johnp/Documents/GitHub/Thighs/dependencies/glfw/include/GLFW/glfw3.h
  C:/msys64/mingw64/include/GL/gl.h
 
 CMakeFiles/thighs.dir/src/main.cpp.obj

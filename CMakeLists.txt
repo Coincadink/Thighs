@@ -3,10 +3,9 @@ project(Thighs VERSION 0.0.0)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(glm_DIR "C:/Libraries/glm/cmake/glm")
-
 find_package(Vulkan REQUIRED)
-find_package(glm REQUIRED)
+
+add_subdirectory(dependencies/glm)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
