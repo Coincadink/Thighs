@@ -7,12 +7,12 @@ find_package(Vulkan REQUIRED)
 
 add_subdirectory(dependencies/glm)
 
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-add_subdirectory(dependencies/glfw)
+# set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+# set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+# set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+# add_subdirectory(dependencies/glfw) add glfw to link_libs
 
-add_executable(thighs src/application.cpp src/Vulkan_mandelbrot_generator.cpp)
-target_link_libraries(thighs Vulkan::Vulkan glm::glm glfw)
+add_executable(thighs src/mandelbrot.cpp src/Vulkan_mandelbrot_generator.cpp)
+target_link_libraries(thighs Vulkan::Vulkan glm::glm)
 
 configure_file(shaders/comp.spv shaders/comp.spv COPYONLY)
