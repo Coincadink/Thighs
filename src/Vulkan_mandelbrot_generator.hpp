@@ -10,7 +10,7 @@
 class Vulkan_mandelbrot_generator {
  public:
   // Create a generator with the width and the height of the image.
-  Vulkan_mandelbrot_generator(int width, int height);
+  Vulkan_mandelbrot_generator(int width, int height, uint32_t workgroup_size);
 
   // Return the raw data of a mandelbrot image.
   std::vector<unsigned char> generate();

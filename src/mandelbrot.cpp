@@ -3,11 +3,14 @@
 
 int main() 
 {
-  int width = 6000;
-  int height = 4000;
+  int width = 4800;
+  int height = 3200;
+
+  // Max size for intel integrated is 32.
+  uint32_t workgroup_size = 32;
 
   auto raw_image = std::vector<unsigned char>{};
-  raw_image = Vulkan_mandelbrot_generator{width, height}.generate();
+  raw_image = Vulkan_mandelbrot_generator{width, height, workgroup_size}.generate();
 
   int pixelTest = -1;
 

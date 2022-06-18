@@ -60,8 +60,8 @@ std::vector<char> read_file(const std::string& filename) {
   return buffer;
 }
 
-Vulkan_mandelbrot_generator::Vulkan_mandelbrot_generator(int width, int height)
-  : width_{width}, height_{height}, workgroup_size_{8, 8} {}
+Vulkan_mandelbrot_generator::Vulkan_mandelbrot_generator(int width, int height, uint32_t workgroup_size)
+  : width_{width}, height_{height}, workgroup_size_{workgroup_size, workgroup_size} {}
 
 std::vector<unsigned char> Vulkan_mandelbrot_generator::generate() {
   // Hardware Setup Stage
