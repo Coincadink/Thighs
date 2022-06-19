@@ -14,8 +14,8 @@ int main()
 {
   const char* filename = "mandelbrot.png";
 
-  int width = 9600;
-  int height = 6400;
+  int width = 1200;
+  int height = 1200;
   // Max size for intel integrated 520 is 32.
   uint32_t workgroup_size = 32;
 
