@@ -1,6 +1,7 @@
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
-#include "Vulkan_mandelbrot_generator.hpp"
+// #include "Vulkan_mandelbrot_generator.hpp"
+#include "VulkanManager.h"
 #include "lodepng.h"
 #include <iostream>
 
@@ -17,12 +18,14 @@ int main()
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 	GLFWwindow* window = glfwCreateWindow(width, height, "Vulkan", nullptr, nullptr);
 
-	Vulkan_mandelbrot_generator generator = Vulkan_mandelbrot_generator{width, height, workgroup_size};
-	VkInstance instance = generator.generate();
+	// Vulkan_mandelbrot_generator generator = Vulkan_mandelbrot_generator{width, height, workgroup_size};
+	// VkInstance instance = generator.generate();
+
+	VulkanManager manager = VulkanManager{width, height, workgroup_size};
+	manager.initVulkan();
 
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents();
-		// drawFrame();
 	}
 }

@@ -59,6 +59,7 @@ private:
     #endif
 
     void findPhysicalDevice();
+    VkPhysicalDevice pickPhysicalDevice(std::vector<vk::PhysicalDevice, std::allocator<vk::PhysicalDevice>> physicalDevices);
 
     void cleanup();
 

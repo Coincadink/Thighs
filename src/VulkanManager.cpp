@@ -100,7 +100,7 @@ void VulkanManager::initVulkan()
     setupDebugUtilsMessenger();
     #endif
 
-
+    findPhysicalDevice();
 }
 
 void VulkanManager::createInstance()
@@ -148,7 +148,7 @@ void VulkanManager::setupDebugUtilsMessenger()
 {
     auto severityFlags = vk::DebugUtilsMessageSeverityFlagsEXT
     {
-        vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |
+        // vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |
         vk::DebugUtilsMessageSeverityFlagBitsEXT::eInfo |
         vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |
         vk::DebugUtilsMessageSeverityFlagBitsEXT::eError
@@ -178,10 +178,27 @@ void VulkanManager::findPhysicalDevice()
         throw std::runtime_error("Cannot find any physical devices.");
     }
 
+    auto physicalDevice = pickPhysicalDevice(physicalDevices);
+}
+
+VkPhysicalDevice VulkanManager::pickPhysicalDevice(std::vector<vk::PhysicalDevice, std::allocator<vk::PhysicalDevice>> physicalDevices)
+{
     for (auto physicalDevice : physicalDevices)
     {
-        std::cout << physicalDevice << "\n";
+        VkPhysicalDeviceProperties deviceProperties;
+        vkGetPhysicalDeviceProperties(physicalDevice, &deviceProperties);
+        VkPhysicalDeviceMemoryProperties memoryProperties;
+        vkGetPhysicalDeviceMemoryProperties (physicalDevice, &memoryProperties);
+
+        std::cout << "\n" <<  deviceProperties.deviceName << "\n";
+        std::cout << deviceProperties.deviceType << "\n";
+        std::cout << memoryProperties.memoryHeapCount << "\n";
+        std::cout << memoryProperties.memoryHeaps << "\n";
+        std::cout << memoryProperties.memoryTypeCount << "\n";
+        std::cout << memoryProperties.memoryTypes << "\n";
     }
+
+    return physicalDevices[0];
 }
 
 void VulkanManager::cleanup()
