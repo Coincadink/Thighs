@@ -63,7 +63,12 @@ std::vector<char> read_file(const std::string& filename) {
 Vulkan_mandelbrot_generator::Vulkan_mandelbrot_generator(int width, int height, uint32_t workgroup_size)
   : width_{width}, height_{height}, workgroup_size_{workgroup_size, workgroup_size} {}
 
-std::vector<unsigned char> Vulkan_mandelbrot_generator::generate() {
+Vulkan_mandelbrot_generator::~Vulkan_mandelbrot_generator()
+{
+  cleanup();
+}
+
+VkInstance Vulkan_mandelbrot_generator::generate() {
   // Hardware Setup Stage
   create_instance();
 #ifndef NDEBUG
@@ -81,10 +86,9 @@ std::vector<unsigned char> Vulkan_mandelbrot_generator::generate() {
   create_command_buffer();
   submit_command_buffer();
   // Fetch data from VRAM to RAM.
-  auto raw_image = fetch_rendered_image();
+  // auto raw_image = fetch_rendered_image();
 
-  cleanup();
-  return raw_image;
+  return instance_;
 }
 
 std::vector<unsigned char> Vulkan_mandelbrot_generator::fetch_rendered_image() {
@@ -155,6 +159,13 @@ void Vulkan_mandelbrot_generator::find_physical_device() {
   if (physical_devices.empty()) {
     throw std::runtime_error{"Cannot find any physical devices."};
   }
+  for(auto physicalDevice : physical_devices)
+  {
+    VkPhysicalDeviceProperties props;
+    vkGetPhysicalDeviceProperties(physicalDevice, &props);
+    std::cout << props.deviceName << std::endl;
+  }
+
   // We simply choose the first available physical device.
   physical_device_ = physical_devices.front();
 }
@@ -428,8 +439,8 @@ Vulkan_mandelbrot_generator::create_buffer(vk::DeviceSize size,
 #ifndef NDEBUG
 void Vulkan_mandelbrot_generator::setup_debug_utils_messenger() {
   auto severity_flags = vk::DebugUtilsMessageSeverityFlagsEXT{
-    vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |
-      vk::DebugUtilsMessageSeverityFlagBitsEXT::eInfo |
+    //  vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |
+    //  vk::DebugUtilsMessageSeverityFlagBitsEXT::eInfo |
       vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |
       vk::DebugUtilsMessageSeverityFlagBitsEXT::eError};
 
